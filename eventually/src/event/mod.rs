@@ -8,7 +8,7 @@ use futures::stream::BoxStream;
 use serde::{Deserialize, Serialize};
 
 pub use crate::event::store::Store;
-use crate::{message, version};
+use crate::{event, message, version};
 
 /// An Event is a [Message][message::Message] carring the information about a Domain Event,
 /// an occurrence in the system lifetime that is relevant for the Domain

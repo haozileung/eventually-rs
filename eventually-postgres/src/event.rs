@@ -50,7 +50,7 @@ where
     );
 
     sqlx::query(
-            r#"INSERT INTO events (event_stream_id, "type", "version", event, metadata) VALUES ($1, $2, $3, $4, $5)"#,
+            r#"INSERT INTO events (event_stream_id, "type", "version", event, sent, metadata) VALUES ($1, $2, $3, $4, DEFAULT, $5)"#,
         )
             .bind(event_stream_id)
             .bind(event_type)

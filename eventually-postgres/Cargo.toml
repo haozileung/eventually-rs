@@ -12,21 +12,21 @@ categories = ["web-programming", "asynchronous"]
 keywords = ["postgres", "postgresql", "database", "ddd", "event-sourcing"]
 
 [dependencies]
-anyhow = "1.0.80"
-async-trait = "0.1.77"
-chrono = "0.4.34"
+anyhow = "1.0.83"
+async-trait = "0.1.80"
+chrono = "0.4.38"
 eventually = { path = "../eventually", version = "0.5.0", features = [
     "serde-json",
 ] }
 futures = "0.3.30"
 lazy_static = "1.4.0"
-regex = "1.10.3"
-sqlx = { version = "0.7.3", features = [
+regex = "1.10.4"
+sqlx = { version = "0.7.4", features = [
     "runtime-tokio-rustls",
     "postgres",
     "migrate",
 ] }
-thiserror = "1.0.57"
+thiserror = "1.0.60"
 
 [dev-dependencies]
 tokio = { version = "1.36.0", features = ["macros", "rt"] }

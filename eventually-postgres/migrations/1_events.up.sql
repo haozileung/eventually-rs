@@ -8,6 +8,7 @@ CREATE TABLE events (
     "type"           TEXT    NOT NULL,
     "version"        INTEGER NOT NULL CHECK ("version" > 0),
     "event"          BYTEA   NOT NULL,
+    sent             BOOL    NOT NULL DEFAULT FALSE,
     metadata         JSONB,
 
     PRIMARY KEY (event_stream_id, "version"),
